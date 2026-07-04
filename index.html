@@ -167,7 +167,7 @@
   <div class="modal">
 
     <div class="modal-header">
-      <div class="modal-icon create" id="formModalIcon">✨</div>
+      <div class="modal-icon create" id="formModalIcon" role="button" tabindex="0" title="Cerrar ventana">✨</div>
       <div class="modal-header-text">
         <div class="modal-title" id="formModalTitle">Nuevo Prompt</div>
         <div class="modal-subtitle" id="formModalSubtitle">Completá los campos para agregar un prompt</div>
@@ -259,7 +259,7 @@
   <div class="modal" style="max-width: 460px;">
 
     <div class="modal-header">
-      <div class="modal-icon delete">🗑️</div>
+      <div class="modal-icon delete" id="deleteModalIcon" role="button" tabindex="0" title="Cerrar ventana">🗑️</div>
       <div class="modal-header-text">
         <div class="modal-title" id="deleteModalTitle">Eliminar Prompt</div>
         <div class="modal-subtitle">Esta acción no se puede deshacer</div>
@@ -295,7 +295,12 @@
   <div class="modal">
 
     <div class="modal-header">
-      <div class="modal-icon create">👁️</div>
+      <div class="modal-icon create" id="detailModalIcon" role="button" tabindex="0" title="Cerrar ventana">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </div>
       <div class="modal-header-text">
         <div class="modal-title" id="detailModalTitle">Ver Prompt</div>
         <div class="modal-subtitle" id="detailModalCategory">—</div>
