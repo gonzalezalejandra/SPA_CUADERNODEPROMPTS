@@ -591,6 +591,14 @@ tbody td {
   white-space: nowrap;
 }
 
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 0;
+}
+
 .category-badge {
   display: inline-flex;
   align-items: center;
@@ -602,6 +610,35 @@ tbody td {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   color: white;
   box-shadow: 0 2px 6px var(--accent-glow);
+}
+
+.btn-view-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-hover);
+  border: 1.5px solid var(--border-color);
+  color: var(--accent-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-view-detail:hover {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.btn-view-detail svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
 }
 
 .td-name {
@@ -778,6 +815,40 @@ tbody td {
   justify-content: center;
   font-size: 22px;
   flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.modal-icon[role="button"] {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-icon[role="button"]::after {
+  content: "✕";
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-icon[role="button"]:hover {
+  transform: scale(1.05) rotate(90deg);
+  background: var(--error) !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.modal-icon[role="button"]:hover * {
+  opacity: 0;
+}
+
+.modal-icon[role="button"]:hover::after {
+  opacity: 1;
 }
 
 .modal-icon.create { background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); }
